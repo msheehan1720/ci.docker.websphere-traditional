@@ -1,5 +1,5 @@
 FROM ibmcom/websphere-traditional:8.5.5.19
-COPY app.ea work/config/app.ear
+COPY app.ear work/config/app.ear
 COPY install_app.py work/config/install_app.py
 COPY was-config.props work/config/was-config.props
 COPY scripts/*  work/
