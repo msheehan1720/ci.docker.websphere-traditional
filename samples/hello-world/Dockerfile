@@ -4,7 +4,7 @@ WORKDIR /tmp/work/
 
 COPY . /tmp/work/
 
-RUN  chmod 755  /tmp/work/
+#RUN  chmod 755  /tmp/work/
 
 USER was
 # RUN env JVM_EXTRA_CMD_ARGS=-Xnoloa /tmp/work/config/configure.sh
