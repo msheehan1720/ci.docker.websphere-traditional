@@ -4,12 +4,13 @@ USER was
 RUN mkdir -p  /tmp/work/config
 
 # Set WorkDir for OC
-WORKDIR /tmp/work
+WORKDIR /tmp/work/
 
-COPY app.ear /tmp/work/config/app.ear 
-COPY install_app.py /tmp/work/config/install_app.py
-COPY was-config.props  /tmp/work/config/was-config.props
-#COPY scripts/*   /work/
-# RUN  chmod 755  /tmp/build/inputs/work
+COPY . /tmp/work/
+
+WORKDIR /tmp/work/config
+COPY . /tmp/work/config
+
+RUN  chmod 755  /tmp/work/config/
 USER was
 RUN env JVM_EXTRA_CMD_ARGS=-Xnoloa /tmp/work/config/configure.sh
