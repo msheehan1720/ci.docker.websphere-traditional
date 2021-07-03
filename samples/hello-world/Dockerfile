@@ -1,8 +1,4 @@
 FROM ibmcom/websphere-traditional:8.5.5.19
-USER was
-
-RUN mkdir -p  /tmp/work/config
-
 # Set WorkDir for OC
 WORKDIR /tmp/work/
 
