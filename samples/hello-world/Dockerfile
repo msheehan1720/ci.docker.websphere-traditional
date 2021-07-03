@@ -8,9 +8,6 @@ WORKDIR /tmp/work/
 
 COPY . /tmp/work/
 
-WORKDIR /tmp/work/config
-COPY scripts/*  /tmp/work/config/
-
 RUN  chmod 755  /tmp/work/
 
 USER was
